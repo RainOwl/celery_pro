@@ -22,5 +22,8 @@ def setup_periodic_tasks(sender, **kwargs):
                                  
 @app.task
 def test(arg):
-    print("running-->",arog
-            )
+    print("running-->",arg)
+
+
+# run:celery -A periodic_task worker -l debug(info)
+#     celery -A periodic_task beat -l debug(info)
